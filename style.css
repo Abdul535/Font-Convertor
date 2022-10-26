@@ -1,0 +1,56 @@
+footer{ 
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color:white;
+    right: 43%; 
+    bottom: 5px;
+}
+
+body {
+    background-color: rgb(35,40,52);
+    font-family:'Times New Roman', Times, serif ;
+}
+
+label {
+    font-family:'Times New Roman', Times, serif ;
+}
+.container {
+    margin:25vh 40vw; 
+    width: fit-content;
+    padding: 10px;
+    background: rgb(255,255,255);
+    background: linear-gradient(138deg, rgba(255,255,255,1) 0%, rgba(70,165,243,1) 100%);
+    border-radius: 6px;
+    -webkit-box-shadow: 3px 10px 217px -22px rgba(0,0,0,1);
+    -moz-box-shadow: 3px 10px 217px -22px rgba(0,0,0,1);
+    box-shadow: 3px 10px 217px -22px rgba(0,0,0,1);
+}
+
+.container h1{
+    text-align: center;
+    font-family: 'Roboto Mono';
+}
+
+input[type=submit]{
+    border: 1px solid rgb(41, 156, 228);
+    background-color: rgb(41, 156, 228);
+    color:white;
+    border-radius: 25px;
+}
+
+input[type=submit]:hover{
+    border: 1px solid rgb(4, 133, 213);
+    background-color: rgb(0, 140, 227);
+    cursor: pointer;
+    box-shadow: 3px 10px 217px -22px rgba(0,0,0,1);
+}
+
+a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(55, 155, 243);
+    padding: 15px;
+    border-radius: 10px;
+}

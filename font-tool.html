@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Converter</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Berkshire+Swash&family=Comfortaa&family=DM+Serif+Display&family=Roboto+Mono&display=swap");
+    </style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Font Converter</h1>
+      <form onsubmit="changeFont(event)">
+        <p><label for="headlable">Enter your Text Here : </label></p>
+        <textarea
+          id="textinput"
+          name="textinput"
+          rows="4"
+          cols="50"
+          placeholder="Enter Text Here..."
+        ></textarea
+        ><br />
+        <label for="cars">Choose a Font Family:</label>
+
+        <select name="fonts" id="fonts">
+          <option value="'Aboreto', cursive">Aboreto</option>
+          <option value="'Berkshire Swash', cursive">Berkshire Swash</option>
+          <option value="'Comfortaa', cursive">Comfortaa</option>
+          <option value="'DM Serif Display', serif">DM Serif Display</option>
+          <option value="'Roboto Mono', monospace">Roboto Mono</option></select
+        ><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+      <br /><br />
+      <textarea 
+      id="newtext"
+      rows="4"
+      cols="50"
+      ></textarea>
+    </div>
+    <footer>
+        <div>
+            <a href="https://www.github.com/Abdul535" target="_blank">
+Made with <svg viewBox="0 0 1792 1792" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="height: 0.8rem;"><path d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26T145 952.5 77 855 23.5 734 0 596q0-220 127-344t351-124q62 0 126.5 21.5t120 58T820 276t76 68q36-36 76-68t95.5-68.5 120-58T1314 128q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z" fill="#e25555"></path></svg> by Abdullah 
+              </a>
+            <br />
+        </div>
+    </footer>
+  </body>
+  <script>
+    document.getElementById("date").innerText = new Date().getFullYear();
+    function changeFont(event) {
+      //Prevents the page from Reloading
+      event.preventDefault();
+
+      //Getting Input from User Text Area
+      let text = document.getElementById("textinput").value;
+      console.log(text);
+
+      //Getting Font Name form Select Drop Down Menu
+      let fontname = document.getElementById("fonts").value;
+      console.log(fontname);
+
+      //This is the Element that has the Output Text Area
+      let formattedText = document.getElementById("newtext");
+    
+      console.log(formattedText);
+      //Changing Text of Output Text Area
+      formattedText.value= text;
+
+      //adding a font Style for the Output Text Area Tag
+      formattedText.style.fontFamily = fontname;
+
+      //disable the output text area
+      formattedText.disabled = false;
+    }
+  </script>
+</html>
